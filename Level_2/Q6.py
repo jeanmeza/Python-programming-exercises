@@ -3,9 +3,6 @@ import math
 C = 50
 H = 30
 D = input().split(',')
+Q=(math.sqrt((2 * C * int(i))/H) for i in D)
 
-values = []
-for d in D:
-    values.append(str(int(round(math.sqrt(2*C*float(d)/H)))))
-
-print(','.join(values))
+print(math.floor(i) for i in Q)

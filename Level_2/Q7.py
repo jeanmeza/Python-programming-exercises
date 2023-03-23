@@ -1,9 +1,11 @@
+input_str = input()
+dimensions = [int(x) for x in input_str.split(',')]
+rowNum = dimensions[0]
+colNum = dimensions[1]
+multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
 
-inp = input().split(',')
-X = int(inp.pop(0))
-Y = int(inp.pop(0))
+for row in range(rowNum):
+    for col in range(colNum):
+        multilist[row][col] = row * col
 
-for x in range(X):
-    for y in range(Y):
-        pass
-
+print(multilist)
